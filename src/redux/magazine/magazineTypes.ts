@@ -1,0 +1,1 @@
+export const BUY_MAGAZINE = "BUY_MAGAZINE";

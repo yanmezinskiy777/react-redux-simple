@@ -1,7 +1,8 @@
 import { Provider } from "react-redux"
-import store from "./redux/book/store"
+import store from "./redux/rootStore"
 import BooksContainer from './components/booksContainer';
 import BooksHooksContainer from "./components/booksHooksContainer";
+import MagazineHooksContainer from "./components/magazineHooksContainer";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <div className="App">
         <BooksContainer/>
         <BooksHooksContainer/>
+        <MagazineHooksContainer/> 
       </div>
     </Provider>
   );

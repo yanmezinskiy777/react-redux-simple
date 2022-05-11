@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { connect, ConnectedProps } from "react-redux";
 import { onByBookAction } from "../redux/book/bookActions";
-import { BookState } from "../redux/book/types";
+import { ApplicationState } from "../redux/rootStore";
 
 const BooksContainer: FC<Props> = ({ numberOfBooks , onBuyBook }) => {
   return (
@@ -12,9 +12,9 @@ const BooksContainer: FC<Props> = ({ numberOfBooks , onBuyBook }) => {
   );
 };
 
-const mapStateToProps = (state: BookState) => {
+const mapStateToProps = (state: ApplicationState) => {
   return {
-    numberOfBooks: state && state.numberOfBooks
+    numberOfBooks: state && state.book.numberOfBooks
   };
 };
 

@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from "react-redux"
 import { onByBookAction } from "../redux/book/bookActions";
-import { AppDispatch } from "../redux/book/store";
-import { BookState } from "../redux/book/types"
+
+import { AppDispatch, ApplicationState } from "../redux/rootStore";
 
 const BooksHooksContainer = () => {
-  const numberOfBooks = useSelector((state: BookState ) => state.numberOfBooks)
+  const numberOfBooks = useSelector((state: ApplicationState ) => state.book.numberOfBooks)
   const dispatch = useDispatch<AppDispatch>();
   const onBuyBook = () => dispatch(onByBookAction())
   return (
