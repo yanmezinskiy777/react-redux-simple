@@ -3,4 +3,6 @@ import reducer from "./bookReducer";
 
 const store = createStore(reducer);
 
+export type AppDispatch = typeof store.dispatch
+
 export default store;
