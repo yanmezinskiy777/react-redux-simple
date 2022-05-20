@@ -11,7 +11,7 @@ const reducer: Reducer<MagazineState, AnyAction> = (state = initState, action)  
     case BUY_MAGAZINE:
       return {
         ...state,
-        numberOfMagazines: state.numberOfMagazines && state.numberOfMagazines - 1,
+        numberOfMagazines: state.numberOfMagazines && state.numberOfMagazines - action.payload,
       };
     default: return state
   }

@@ -3,6 +3,7 @@ import store from "./redux/rootStore"
 import BooksContainer from './components/booksContainer';
 import BooksHooksContainer from "./components/booksHooksContainer";
 import MagazineHooksContainer from "./components/magazineHooksContainer";
+import UserContainer from "./components/userContainer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <BooksContainer/>
         <BooksHooksContainer/>
         <MagazineHooksContainer/> 
+        <UserContainer/>
       </div>
     </Provider>
   );
